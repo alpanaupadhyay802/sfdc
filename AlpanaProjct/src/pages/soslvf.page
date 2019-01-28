@@ -1,0 +1,42 @@
+<apex:page controller="soslcoexample">
+    <apex:form >
+        <apex:outputLabel >FindDetails</apex:outputLabel>
+        <apex:inputText value="{!SearchQuery}"/>
+        <apex:commandButton value="Show Details" action="{!sosldemo_method}"/>
+        
+        <apex:pageBlock title="Accounts">
+            <apex:pageBlockTable value="{!acclist}" var="acc">
+                <apex:column value="{!acc.Name}"/>
+                <apex:column value="{!acc.Type}"/>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Contacts">
+            <apex:pageBlockTable value="{!conlist}" var="con">
+                <apex:column value="{!con.Name}"/>
+                <apex:column value="{!con.Email}"/>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Leads">
+            <apex:pageBlockTable value="{!leadlist}" var="lead">
+                <apex:column value="{!lead.Name}"/>
+                <apex:column value="{!lead.Status}"/>
+                <apex:column value="{!lead.Company}"/>
+                
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Opty">
+            <apex:pageBlockTable value="{!optylist}" var="opty">
+                <apex:column value="{!opty.Name}"/>
+                <apex:column value="{!opty.id}"/>
+                
+                
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

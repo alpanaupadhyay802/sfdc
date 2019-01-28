@@ -1,0 +1,49 @@
+<apex:page standardController="contact" recordSetVar="items" sidebar="false">
+    <apex:form >
+        <style>
+            .one
+            {
+            margin:20px;
+            pdding:20px;
+            width:150px;
+            height:80px;
+            background-color:pink;
+            bordr-radius:30pi;
+            }
+            .outer
+            {
+            margin:20px;
+            pdding:20px;
+            width:250px;
+            height:500px;
+            background-color:red;
+            }
+            .recent
+            {
+            margin:20px;
+            pdding:10px;
+            width:1500px;
+            height:30px;
+            background-color:green;
+            }
+            
+        </style>
+        
+            <div class='recent'>
+                <apex:outputLabel style="fontsize:200px;">
+                    recent items
+                </apex:outputLabel>
+                
+            </div>
+        <div class="one">
+            <apex:dataTable value="{!items}" var="a" rows="3" first="2">
+                <apex:column >
+                    <apex:image url="https://alpanapoc-dev-ed--c.ap5.visual.force.com/resource/1535024820000/Company_logo"
+ style="width:20px;height:15px;padding:5px;float:left;"/>
+                    <apex:commandLink value="{!a.name}  "/>
+                </apex:column>
+            </apex:dataTable>
+            
+        </div>
+    </apex:form>
+</apex:page>

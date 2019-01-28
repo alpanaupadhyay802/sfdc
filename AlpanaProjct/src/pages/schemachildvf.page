@@ -1,0 +1,8 @@
+<apex:page controller="schemafieldexample">
+    <apex:form >
+        <apex:selectList size="1">
+            <apex:outputLabel >SelectedObject</apex:outputLabel>
+            <apex:selectOptions value="{!options}"/>
+        </apex:selectList>
+    </apex:form>
+</apex:page>
